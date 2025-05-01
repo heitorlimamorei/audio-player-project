@@ -1,12 +1,10 @@
 import PlayerPageComponent from "@/components/PlayerPage";
 
-interface AudioPlayerPageP {
-  params: {
-    musicid: string;
-  };
+interface AudioPlayerPageProps {
+  params: Promise<any>
 }
 
-export default async function AudioPlayerPage(props: AudioPlayerPageP) {
+export default async function AudioPlayerPage(props: AudioPlayerPageProps) {
   const params = await props.params;
  
   return (
